@@ -1,4 +1,8 @@
-This pipeline is dependent on conda.
+Installation instructions
+-------------------------------------
+
+Those are the installation instructions for the single cell workshop at the SIB-Days 2018
+
 
 ### Step 1: Download and install miniconda3
 First you need to download and install miniconda3:
