@@ -1,0 +1,33 @@
+Drop-seq public software distribution
+Version 1.13
+December 2017
+dropseq@googlegroups.com
+
+
+Included in this release of the Drop-seq toolkit is a new Java program
+(CollapseBarcodesInPlace), as well as collection of R functions. This code has been
+released to show examples of how we call cells using the cumulative distribution plot, and
+plotting code we use to assess the quality of single-organism and barnyard-style
+experiments. While we hope this R code is informative for your own projects, we cannot
+directly support it.
+
+CollapseBarcodesInPlace is a utility to collapse cell barcodes by edit distance.  This has
+been a requested feature for the community, and we're happy to support answering questions
+about how it works and how it's best utilized.  While we are confident that it performs
+the correct task computationally, setting the parameters on what cell barcodes should be
+collapsed in a way that yields additional UMIs per cell without over-collapsing cell
+barcodes in barnyard experiments is unclear.  In our experiments, we have seen appreciable
+yields in the number of reads gained by collapsing cell barcodes, but because the
+collapsed cell barcodes share highly overlapping transcriptomes with the same UMIs, the
+number of new UMIs gained is very low.
+
+There are 4 different R functions included in this release (along with their associated helper functions):
+
+selectCellByReadsSCM
+categorizeCellsUsingKnee
+plotSingleOrganism
+plotPairOrganism
+
+These have been used by our lab to select cells based on the cumulative read distribution
+curve, and to plot various QC metrics in both single organism experiments
+(plotSingleOrganism) as well as barnyard experiments (plotPairOrganism).
